@@ -16,7 +16,9 @@
     - Section 2: Network mapping 
       >Select VPC                                                                                               
       >Choose Avaialiblity Zones and Subnets
-      - Mandatory to have two Subnet for High Availaiblity 
+      ```bash
+      Note: Mandatory to have two Subnet in Diffrent Availaiblity Zone for High Availaiblity 
+      ```
     - Section 3 : Security groups 
       > user will only hit http request to the load balancer either on HTTP or HTTPs so Give the Security Group based on that
     - Section 4: Listeners and routing                                                                          
@@ -28,6 +30,13 @@
         /login → goes to auth servers
     - Section 5: Taget Group 
       > If you already Created that then Choose it from the Drop Down else refer this link
+    
+   ```bash
+    You Can Add one more listener for HTTPs also
+    ```
+
+### 🧱 Step 3: Click on "Create Load Balancer"
+Keep Everything as Default for Now
 
     
 
