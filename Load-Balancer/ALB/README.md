@@ -4,6 +4,8 @@
     - Handle more load
     - Provide fault tolerance
 
+<img src="/static-images/alb-exceledraw.png" alt="Architecture" width="500"/>
+
 ## 🧩 Scenarios: At least 1 EC2 instance running (2 recommended for high availability)
 
 ### 🧭 Step 1: Go to EC2 Dashboard
