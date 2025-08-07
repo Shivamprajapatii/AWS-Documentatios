@@ -4,9 +4,7 @@ Cause When Traffic Increase We will not go to the aws console and run the anothe
 Better We use aws auto scalling Featur through that we can auto scale-out and scale-in our server based on the request. we does not need to care about. 
 
 # Steps to Create Auto Scaling
-### STEP 1: Create a Launch Template 
-A Launch Template is like a saved form that contains all the settings needed to launch an EC2 instance — such as the AMI, instance type, key pair, security groups, storage, and more
-
+### Requirements 1: Create a Launch Template
 
 ```bash
 If You have already any running server (EC2) and if you want Dicto Copy Server then create the AMI(Amazon Machine Image) of that existing server. Means your Entire Operating System, Configuration, and folder and files etc will be Grouped and become a OS image.
