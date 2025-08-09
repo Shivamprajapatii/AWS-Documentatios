@@ -60,3 +60,5 @@
     > click on Edit Route > add 0.0.0.0/0 and destination NAT 
     (all set)
  
+
+## All Set Done with NAT in Your Private Subnet
