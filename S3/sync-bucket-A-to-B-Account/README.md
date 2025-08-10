@@ -87,5 +87,21 @@
     "AWS": "arn:aws:iam::983822652251:user/aws-server-migratrions" add your source Account Details
 
 
+# Command To Sync 
+### First Configure Your Destination Account inside your Laptop
+```bash
+    > aws configure
+    > access key
+    > secret key
+    > region
+    > josn
+```
+## Final Command to Sync 
+```bash
+    >  aws s3 sync s3://hotel-image-bucket s3://prod-hotel-image-bucket --acl bucket-owner-full-control
+```
+
+
+
 
 
