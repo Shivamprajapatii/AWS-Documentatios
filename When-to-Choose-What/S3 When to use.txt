@@ -1,0 +1,2 @@
+S3 + CloudFront → Pure static site, global delivery, lowest cost.
+
