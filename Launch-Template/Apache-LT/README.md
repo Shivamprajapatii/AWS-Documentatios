@@ -34,3 +34,4 @@ So instead of configuring all this every time you launch an instance, you just u
      sudo systemctl start nginx
 
 ### Step 7: Click Create launch template
+   You are Good to Go
