@@ -1,38 +1,22 @@
-## AWS Auto Scaling 
-#### Why We Need Autoscalling
-Cause When Traffic Increase We will not go to the aws console and run the another server so on so forth multiple time. 
-Better We use aws auto scalling Featur through that we can auto scale-out and scale-in our server based on the request. we does not need to care about. 
+# AWS Auto Scaling 
+## Flow Of AutoScaling With Application Load Balancer
 
-# Steps to Create Auto Scaling
-
-### Requirements 1: Create a Launch Template
-    If You have already any running server (EC2) and if you want Dicto Copy Server then create the AMI(Amazon Machine Image) of that existing server. Means your Entire Operating System, Configuration, and folder and files etc will be Grouped and become a OS image.
-    
-    Ex- if You run apache2 server and nginx already in server one => and when you create the ami of that server all the configuration of that server will be available in second server also.
-
-    1. If you want to go with your existing confiuration Take AMI of that and then use it into Launch Template.
-    2. If you want manually configure new setup create a fresh Laucnh Template with your configuration requirements.    
-
-
-# Prerequisites
-- Before starting, make sure you have:
-- VPC with at least 2 subnets in different Availability Zones (for high availability).
-- Security Group for your EC2 instances (open only necessary ports, e.g., 22 for SSH, 80 for HTTP).
-- Key Pair for SSH access to EC2 instances.
-- IAM Role for EC2 (optional but recommended, e.g., SSM access).
-
+<img src="./static-images/image1.png" alt="Architecture">
+   
 ## Steps To Setup SutoScaling Group
+<img src="./static-images/image.png" alt="Architecture" >
 
-#### Step 1: Create a Launch Template
-A Launch Template defines how new EC2 instances will be launched.
+# Step 1: Create a Launch Template
+If You have already any running server (EC2) and if you want Dicto Copy Server then create the AMI(Amazon Machine Image) of that existing server. Means your Entire Operating System, Configuration, and folder and files etc will be Grouped and become a OS image.
 <a href="/Launch-Template/README.md">Click Here</a>
 
-#### Step 2: Create the Auto Scaling Group
+### Step 2: Create the Auto Scaling Group
     Go to EC2 Dashboard → Auto Scaling Groups → Create Auto Scaling groups                                    
 ## - Section 1: Choose launch template                                                                                      
        i) Give the launch Template name like - my-prod-app-lt                                                   
-       ii) Select Launch Template from Drop Down Keep Version Default 1 as it is for Now.                       
-       iii) Click on next
+       ii) Select Launch Template from Drop Down Keep Version Default 1 as it is for Now.      
+       iii) Choose Static IP and If Any User Data Choose that also                 
+       iv) Click on next
 ## - Section 2: Choose instance launch options                                                                     
         i) Instance type requirements => if you want to change from t2 to t3 large then click on Override launch template else leave it as it is.                                                                 
         ii) Network Box: Choose VPC => Choose Subnets(Select at least two subnets in different AZs.)            
@@ -43,14 +27,11 @@ Or should it wait until the original AZ is fixed to maintain perfect balance?
 
     > ✅ Which one to choose for production? Recommended: Balanced best effort. and if you are in testing choose Balanced only.
 
-## Section 3: Integrate with other Services s                                                                     
+## Section 3: Integrate with other Services                                                                    
         If you Do Not Want to Go with Load Balencing Option Choose 
         => No Load Balancer But Recommended to Go with Load Balancer
         Attach to an existing load balancer : if you already created load Balancer then => you have to 
         Choose from your load balancer target groups => Drop down to select load balancer
-    
-    
-        Choose from Classic Load Balancers : Since this load Balancer not exist so dont go for this
 
         VPC Lattice integration options: if you do this then your auto scaling group will be inside a secure network and VPC
         But for now leave it No VPC Lattice service => and read about VPC Lattice servie also

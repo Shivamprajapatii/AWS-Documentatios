@@ -88,6 +88,9 @@
 
 
 # Command To Sync 
+## Confirm Who You Are Authenticated As
+      aws sts get-caller-identity
+
 ### First Configure Your Destination Account inside your Laptop
 ```bash
     > aws configure
