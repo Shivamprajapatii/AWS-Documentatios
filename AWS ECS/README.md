@@ -29,7 +29,9 @@
   
 <img src="./images/2.png">  
 
-    Click on Create Cluster 
+    Click on Create Cluster :
+    📌 In Amazon ECS (Elastic Container Service),
+    a Cluster is simply a logical group (or box) where your containers (tasks/services) run.
 
 <img src="./images/3.png">  
 
@@ -63,6 +65,7 @@
 ## Step 4: Create Task definitions
 
     I Created the ECR > Then Cluster > Now Create Task Defination
+-   Task Defincation: A Task Definition is like a blueprint (recipe) that tells ECS: 👉 “How should I run a     container (or multiple containers)?”    
 
 <img src="./images/7.png"> 
 

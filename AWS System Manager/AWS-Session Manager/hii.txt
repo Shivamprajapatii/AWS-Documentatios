@@ -1,0 +1,7 @@
+snadby read replica , disaster recovery 
+
+Failover cluster 
+
+DNS Auto Failover
+
+
